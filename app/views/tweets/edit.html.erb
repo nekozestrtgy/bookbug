@@ -1,0 +1,13 @@
+
+  <div class="contents row">
+    <%= form_with model: @tweets, url: {action: 'update'}, html: {method: 'PATCH'} do |f| %>
+      <h3>
+        編集する
+      </h3>
+      <%= f.label :image, placeholder: @tweet.image %><br />
+      <%= f.text_field :image %>
+      <%= f.label :text%><br />
+      <%= f.text_field :text, placeholder: @tweet.text %>
+      <%= f.submit "更新" %>
+    <% end %>
+  </div>
